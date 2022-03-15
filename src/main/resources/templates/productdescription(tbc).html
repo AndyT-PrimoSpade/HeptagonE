@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="img/" />
+  <title>Heptagon Webpage</title>
+  <meta name="description" content="Heptagon Online Shop">
+  <meta name="keywords" content="Online Shop, Heptagon, Wooden">
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- Navbar -->
+  <div th:insert="fragments/navbar.html :: navbar"></div>
+  <div th:insert="fragments/navbar.html :: brandname"></div>
+  <body>
+    <!--Start of Product image & product detail-->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-6">
+          <!--Start of image carousel-->
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-furniture active">
+                <img src="img/consoletable1.jpg" class="d-block w-100" alt="Product Name A1">
+              </div>
+              <div class="carousel-furniture">
+                <img src="img/consoletable2.jpg" class="d-block w-100" alt="Product Name A2">
+              </div>
+              <div class="carousel-furniture">
+                <img src="img/consoletable1.jpg" class="d-block w-100" alt="Product Name A3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--End of image carousel-->
+        </div>
+        <div class="col-md-6">
+          <!--Start of product form-->
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Product Name A</h1>
+              <h4 class="productPrice">$XXX</h4>
+            </div>
+            <div class="col">
+              <span class="label">Tag Name</span>
+              <span class="label">Tag Name</span>
+              <span class="label">Tag Name</span>
+              <span class="label">Tag Name</span>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="productDescription">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, repellat facere, modi unde ipsum ipsa,
+                  numquam qui magnam possimus libero natus nisi eligendi! Qui esse perferendis, quis illo reprehenderit
+                  iure!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="productDimension">
+                <h6>Dimension: Length x Width x Height</h6>
+                <h6>38 x 15 x 20 cm</h6>
+                </p>
+              </div>
+            </div>
+            <form>
+              <!--<div class="form-group col-md-4">
+                <label for="validationDefault04" class="form-label" class="form-label">Wood Type</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option disabled selected value="">Choose...</option>
+                  <option>Oak</option>
+                  <option>Birch</option>
+                  <option>Maple</option>
+                </select>
+              </div> -->
+              <div class="form-group col-md-4">
+                <label for="validationDefault04" class="form-label">Colour Options</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Light Brown</option>
+                  <option>Dark Brown</option>
+                </select>
+              </div>
+              <div class="d-grid gap-2 d-md-flex col-md-10 justify-content-md-end">
+                <button type="submit" class="btn btn-secondary">Add to Cart </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--End of product form-->
+    </div>
+    </div>
+    </div>
+    <!--End of Product image and product detail-->
+    <div class="container mt-3">
+      <div class="row"></div>
+    </div>
+    <!-- Footer -->
+    <div th:insert="fragments/footer.html :: footer"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>

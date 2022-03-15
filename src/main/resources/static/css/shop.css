@@ -1,0 +1,25 @@
+#introSection {
+    background-color: #231814;
+    opacity: 90%;
+    color: #f7f7f7;
+    height: 8rem;
+}
+#filter {
+    height: 7rem;
+    margin-top: 0.5rem;
+}
+#filter button {
+    text-align: center;
+    padding: none;
+    font-size: 0.75rem;
+    padding: 0 1.5rem;
+}
+.card {
+    width: 20rem;
+}
+.card > a {
+    width: 19.9rem;
+}
+#btnStyle {
+    margin-top: 1rem;
+}
