@@ -1,0 +1,13 @@
+#styleSection {
+    background-color: #231814;
+    opacity: 90%;
+    height: 2rem;
+}
+@media screen and (max-width: 770px) {
+    #mobileView {
+        display: none;
+    }
+    #feature {
+        margin-bottom: 3rem;
+    }
+}

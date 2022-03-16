@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Title</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                    aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ml-auto mr-auto">
+                        <li class="nav-furniture mx-4">
+                            <a class="nav-link active" aria-current="page" th:href="@{products}">Shop</a>
+                        </li>
+                        <li class="nav-furniture mx-4">
+                            <a class="nav-link" href="service.html">Services</a>
+                        </li>
+                        <li class="nav-furniture mx-4">
+                            <a class="nav-link" th:href="@{aboutus}">About Us</a>
+                        </li>
+                        <li class="nav-furniture mx-4">
+                            <a class="nav-link" th:href="@{productform}">Form</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="barSize">
+                    <form class="d-flex">
+                        <input id="searchBar" class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="search-button rounded" id="searchBtn" type="submit">
+                            <i class="bi-search"></i></button>
+                    </form>
+                </div>
+                <div>
+                    <button id="loginBtn" type="submit" class="login btn-light rounded">
+                        <i class="bi-person-fill"></i>
+                        <a href="login.html"></a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <section th:fragment="brandname" class="text-center navbar-brand">
+                <a th:href="@{index}">HEPTAGON</a>
+        </section>
+    </header>
+
+</body>
+
+</html>
