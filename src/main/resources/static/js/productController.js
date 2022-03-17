@@ -1,4 +1,5 @@
-const createHTMLList = (index, name, description, price, imageURL) =>
+const createHTMLList = (index, name, type, description, price, length, width, height, color,
+imageURL) =>
 `
 <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
     <div class="card">
@@ -42,17 +43,19 @@ class ProductsController
     {
         this._items = [];
     }
-    addItem(name, description, type, length, width, height, price, imageUrl, imageObject)
+    addItem(name, type, description, price, length, width, height, color, imageUrl,
+    imageObject)
         {
             let productController = this;
             const formData = new FormData();
             formData.append('name', name);
-            formData.append('description', description);
             formData.append('type', type);
+            formData.append('description', description);
+            formData.append('price', price);
             formData.append('length', length);
             formData.append('width', width);
             formData.append('height', height);
-            formData.append('price', price);
+            formData.append('color', color);
             formData.append('imageUrl', imageUrl);
             formData.append('imagefile',imageObject);
 
@@ -78,7 +81,8 @@ class ProductsController
             for (let i=0; i<this._items.length; i++)
             {
                 const item = this._items[i];
-                const productHTML = createHTMLList(i, item.name, item.description, item.price, item.imageUrl);
+                const productHTML = createHTMLList(i, item.name, item.type, item.description,
+                 item.price,item.length, item.width, item.height, item.colour, item.imageUrl);
                 productHTMLList.push(productHTML);
             }
             const pHTML = productHTMLList.join('\n');
@@ -106,11 +110,12 @@ class ProductsController
                         const itemObj = {
                             id: item.id,
                             name: item.name,
-                            description: item.description,
                             type: item.type,
+                            description: item.description,
                             length: item.length,
-                            length: item.width,
-                            length: item.height,
+                            width: item.width,
+                            height: item.height,
+                            color: item.color,
                             price: item.price,
                             imageUrl: item.imageUrl
                        };
