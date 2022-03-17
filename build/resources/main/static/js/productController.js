@@ -1,5 +1,4 @@
-const createHTMLList = (index, name, type, description, price, length, width, height, color,
-imageURL) =>
+const createHTMLList = (index, name, type, description, price, length, width, height,imageURL) =>
 `
 <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
     <div class="card">
@@ -43,7 +42,7 @@ class ProductsController
     {
         this._items = [];
     }
-    addItem(name, type, description, price, length, width, height, color, imageUrl,
+    addItem(name, type, description, price, length, width, height, imageUrl,
     imageObject)
         {
             let productController = this;
@@ -55,7 +54,6 @@ class ProductsController
             formData.append('length', length);
             formData.append('width', width);
             formData.append('height', height);
-            formData.append('color', color);
             formData.append('imageUrl', imageUrl);
             formData.append('imagefile',imageObject);
 
@@ -82,7 +80,7 @@ class ProductsController
             {
                 const item = this._items[i];
                 const productHTML = createHTMLList(i, item.name, item.type, item.description,
-                 item.price,item.length, item.width, item.height, item.colour, item.imageUrl);
+                 item.price,item.length, item.width, item.height, item.imageUrl);
                 productHTMLList.push(productHTML);
             }
             const pHTML = productHTMLList.join('\n');

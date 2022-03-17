@@ -30,17 +30,17 @@
         <div class="col">
           <h4 class="mb-3">Add Product</h4>
           <!--List of input id: name, type, description, price, length, width, height, colour, image1, image2, image3-->
-          <form id="addNewProduct" onSubmit="event.preventDefault(); submitAddProduct();" class="needs-validation"
+          <form id="addNewProduct" class="needs-validation"
             novalidate>
             <!--Pdt Name Field-->
-            <div class=>
+            <div>
               <label class="form-label">Product Name</label>
               <div class="row">
                 <div class="col-md-7">
-                  <input type="text" id="name" name="name" class="form-control">
+                  <input type="text" id="newName" name="name" class="form-control">
                 </div>
                 <div class="col-md-auto">
-                  <select class="form-select" id="type" aria-label="">
+                  <select class="form-select" id="newType" aria-label="">
                     <option selected>Type</option>
                     <option value="chair">Chair</option>
                     <option value="table">Table</option>
@@ -53,89 +53,54 @@
             <!--Pdt Description field-->
             <div class="row">
               <div class="col-md-7">
-                <label for="description" class="form-label mt-2">Product Description</label>
-                <textarea class="form-control" id="description" name="description" rows="2"
+                <label for="newDescription" class="form-label mt-2">Product Description</label>
+                <textarea class="form-control" id="newDescription" name="description" rows="2"
                   placeholder="Featuring a gorgeous spiral-grain texture..." required></textarea>
               </div>
               <!--Pdt Price field-->
               <div class="col-md-2">
-                <label for="price" class="form-label mt-2">Price</label>
+                <label for="newPrice" class="form-label mt-2">Price</label>
                 <div class="form-floating">
-                  <input type="number" class="form-control" id="price" name="price" placeholder="" required>
+                  <input type="number" class="form-control" id="newPrice" name="price"
+                         placeholder="" required>
                   <label for="floatingInputGrid">$</label>
                 </div>
               </div>
             </div>
             <!--Start of pdt dimension input-->
             <div class="row">
-              <label for="dimension" class="form-label mt-2">Product Dimension (cm)</label>
+              <label class="form-label mt-2">Product Dimension (cm)</label>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
                 <div class="col-md">
                   <div class="form-floating">
-                    <input type="number" class="form-control" id="length" name="length" placeholder="" required>
+                    <input type="number" class="form-control" id="newLength" name="length"
+                           placeholder="" required>
                     <label for="floatingInput">Length</label>
                   </div>
                 </div>
                 <div class="col-md">
                   <div class="form-floating">
-                    <input type="number" class="form-control" id="width" name="width" placeholder="" required>
+                    <input type="number" class="form-control" id="newWidth" name="width"
+                           placeholder="" required>
                     <label for="floatingInput">Width</label>
                   </div>
                 </div>
                 <div class="col-md">
                   <div class="form-floating">
-                    <input type="number" class="form-control" id="height" name="height" placeholder="" required>
+                    <input type="number" class="form-control" id="newHeight" name="height"
+                           placeholder="" required>
                     <label for="floatingInput">Height</label>
                   </div>
                 </div>
-
-              </div>
+                </div>
             </div>
             <!--End of pdt dimension-->
-            <!--Start of colour checkbox-->
-            <div class="form-group mt-2">
-              <p>Colour options (Choose all that apply)</p>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="lightbrown" name="colour" value="lightbrown">
-                <label class="form-check-label">
-                  Light Brown
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="darkbrown" name="colour" value="darkbrown">
-                <label class="form-check-label">
-                  Dark Brown
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="black" name="colour" value="black">
-                <label class="form-check-label">
-                  Black
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="ashygrey" name="colour" value="ashygrey">
-                <label class="form-check-label">
-                  Ashy Grey
-                </label>
-              </div>
-            </div>
-            <!--End of colour checkbox-->
             <!--Pdtimgupload field-->
-            <h6 class="mb-3">Product Image Upload</h6>
-            <!--May change to just 1 with add file option up to 3 (TBC)-->
-            <div class="row">
+            <h6 class="mb-3 mt-2">Product Image Upload</h6>
+              <div class="row">
               <div class="custom-file">
-                <input type="file" class="custom-file-input" id="image1" accept="image/*">
+                <input type="file" class="custom-file-input" id="newImageFile" accept="image/*">
                 <label class="custom-file-label" for="customFileLangHTML" data-browse="pdtimgupload1"></label>
-              </div>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input mt-1" id="image2" accept="image/png, image/gif, image/jpeg">
-                <label class="custom-file-label" for="customFileLangHTML" data-browse="pdtimgupload2"></label>
-              </div>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input mt-1" id="image3" accept="image/png, image/gif, image/jpeg">
-                <label class="custom-file-label" for="customFileLangHTML" data-browse="pdtimgupload3"></label>
               </div>
               <small class="text-muted">Only .png, .gif or .jpeg files</small>
             </div>
@@ -150,7 +115,7 @@
   <!-- Footer -->
   <div th:insert="fragments/footer.html :: footer"></div>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/addpdtform.js"></script>
+  <script src="js/productForm.js"></script>
 </body>
 
 </html>

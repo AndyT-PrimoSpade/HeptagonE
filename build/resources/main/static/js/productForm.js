@@ -1,4 +1,4 @@
-
+/*
 //class array
 const addProductList =[];
 let checkboxChecked = [];
@@ -16,7 +16,8 @@ let isCheckBoxChecked = false;
       const price = document.querySelector("#price").value;
       const length = document.querySelector("#length").value;
       const width = document.querySelector("#width").value;
-      const height = document.querySelector("#height").value; 
+      const height = document.querySelector("#height").value;
+      const height = document.querySelector("#color").value;
 
       if (!isCheckBoxChecked) {
         document.querySelector("#lightbrown").setCustomValidity("Please select at least one");
@@ -32,6 +33,7 @@ let isCheckBoxChecked = false;
             length: length, 
             width: width,
             height: height,
+            color: color
           }
       
       addProductList.push(productDetail);
@@ -39,69 +41,70 @@ let isCheckBoxChecked = false;
 
       alert("Submission complete!")
         }
-}//End of submitaddproductfunction
+}//End of submitaddproductfunction*/
+
+const productsControl = new ProductsController();
+let storeImage = ""
+
+//When user clicks on 'Save Item', calls API to add items to the database
+//Add an 'onsubmit' event listener for productform to add a product
+addNewProduct.addEventListener('submit', (event) => {
+    // Prevent default action
+    event.preventDefault();
+    // Select the inputs
+    const newName= document.querySelector('#newName');
+    const newType = document.querySelector('#newType');
+    const mewDescription = document.querySelector('#newDescription');
+    const newPrice = document.querySelector('#newPrice');
+    const newLength = document.querySelector('#newLength');
+    const newWidth = document.querySelector('#newWidth');
+    const newHeight = document.querySelector('#newHeight');
+    const newImageUrl = document.querySelector('#newImageFile');
 
 
-//Perform Validation for checkboxes, store the selected value(s) so as to pass to backend database
-function validateCheckBox()
-{
     /*
-    1) For every checkboxes, create an eventlistener for any changes of the checkboxes (checked or unchecked)    
+        Do the Validation code here
     */
 
-    const checkboxes = document.querySelectorAll("input[type=checkbox]");
-    //checkboxes variable will contain all the checkboxes as objects, and it is NodeList (A list of HTML Elements) 
-    checkboxes.forEach(checkbox => {
-
-        //change is an event (e.g. click, onMouseOver, OnDrag)
-        checkbox.addEventListener('change', function() {
-
-            checkboxChecked = Array.from(checkboxes)
-                                         .filter(checkbox => checkbox.checked)
-                                         .map(checkbox => checkbox.value);
-
-            console.log(checkboxChecked);
-
-            if (checkboxChecked.length == 0) {
-                isCheckBoxChecked = false;
-            }
-            else {
-                isCheckBoxChecked = true;
-
-                
-                document.querySelector("#lightbrown").setCustomValidity("");
-                document.querySelector("#lightbrown").reportValidity();
-            }
-
-            //console.log(isCheckBoxChecked);
-        });
+    // Get the values of the inputs - variable names to be same as MySQL columns
+    const name = newName.value;
+    const type = newType.value;
+    const description = newDescription.value;
+    const price = newPrice.value;
+    const length = newLength.value;
+    const width = newWidth.value;
+    const height = newHeight.value;
 
 
-    });
-}
+    //for HTML5 spec - a file uploaded to the browser should not be reveal the real local path from
+    //the user machine based on security. Browser will append a fakepath
+    //("C:\\fakepath\t-shirt_new.jpg") to the path for the file information
+    //console.log(newItemImageUrl.value); //reflect the path of the image that is uploaded
 
-validateCheckBox();
-//End of product detail input
+    const imageUrl = newItemImageUrl.value.replace("C:\\fakepath\\", "");
+    //imageUrl=t-shirt_new/jpg
 
+  // Clear the form
+    newName.value = '';
+    newType.value = '';
+    newDescription.value = '';
+    newPrice.value = '';
+    newLength.value = '';
+    newWidth.value = '';
+    newHeight.value = '';
+    newImageUrl.value = '';
 
-//Start of submit function
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
+    // Add the task to the task manager
+    productsControl.addItem(name, type, description, price, length, width, height, imageUrl,
+    storeImage);
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+});
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+//Get the image object
+// select file input
+const input = document.querySelector('#newImageFile');
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})//End of submit function
+// add event listener
+input.addEventListener('change', () => {
+    storeImage = input.files[0];
+});
