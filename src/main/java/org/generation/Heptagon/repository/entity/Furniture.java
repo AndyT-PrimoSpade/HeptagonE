@@ -107,7 +107,10 @@ public class Furniture {
     @Override
     public String toString()
     {
-        return "Item{" + "id=" + id + ", name='" + name + '\'' + ", description='" + description + '\'' + ", type='" + type + '\'' + ", length='" + length + '\'' +  ", width='" + width + '\'' + ", height='" + height + '\'' + ", imageUrl='"
-                + imageUrl + '\'' + ", price='" + price + '}';
+        return "Item{" + "id=" + id + ", name='" + name + '\'' + ", description='" + description +
+                '\'' + ", type='" + type + '\'' + ", length='" + length +'\'' + ", width='" + width + '\'' + ", height='" + height +
+                '\'' + ", imageUrl='" + imageUrl + '\'' + ", price='" + price + '}';
     }
 }
+
+

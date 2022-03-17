@@ -1,48 +1,3 @@
-/*
-//class array
-const addProductList =[];
-let checkboxChecked = [];
-let isCheckBoxChecked = false;
-
-//Start of product detail input
-  function submitAddProduct(){
-  //When user clicks on  button
-
-
-      //store input values into the variables based on id, eg fullName, etc...
-      const name = document.querySelector("#name").value;
-      const type= document.querySelector("#type").value;
-      const description = document.querySelector("#description").value;
-      const price = document.querySelector("#price").value;
-      const length = document.querySelector("#length").value;
-      const width = document.querySelector("#width").value;
-      const height = document.querySelector("#height").value;
-      const height = document.querySelector("#color").value;
-
-      if (!isCheckBoxChecked) {
-        document.querySelector("#lightbrown").setCustomValidity("Please select at least one");
-        document.querySelector("#lightbrown").reportValidity();
-      }
-      else {
-        //If all validation is done, all values to be stored in an array of objects
-        const productDetail ={
-            name: name,
-            type: type,
-            description: description,
-            price : price,
-            length: length, 
-            width: width,
-            height: height,
-            color: color
-          }
-      
-      addProductList.push(productDetail);
-      console.log(addProductList);
-
-      alert("Submission complete!")
-        }
-}//End of submitaddproductfunction*/
-
 const productsControl = new ProductsController();
 let storeImage = ""
 
@@ -81,7 +36,7 @@ addNewProduct.addEventListener('submit', (event) => {
     //("C:\\fakepath\t-shirt_new.jpg") to the path for the file information
     //console.log(newItemImageUrl.value); //reflect the path of the image that is uploaded
 
-    const imageUrl = newItemImageUrl.value.replace("C:\\fakepath\\", "");
+    const imageUrl = newImageUrl.value.replace("C:\\fakepath\\", "");
     //imageUrl=t-shirt_new/jpg
 
   // Clear the form
