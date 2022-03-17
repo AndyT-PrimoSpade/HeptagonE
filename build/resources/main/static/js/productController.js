@@ -14,13 +14,22 @@ const createHTMLList = (index, name, description, price, imageURL) =>
                     <h6 class="mb-2 text-end"><span>$${price}</span></h6>
                 </div>
                 <div id="btnStyle" class="d-grid gap-2 col-12 mx-0">
-                    <a id="${index}" class="btn btn-dark" href="#" data-toggle="modal" data-target="#productModal">View More Detail</a>
+                    <a id="${index}" class="btn btn-dark" href="#"
+                    data-toggle="modal" data-target="#productModal">View More Detail</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 `;
+
+function displayProductDetails(item)
+{
+    let myStorage = window.localStorage;
+    myStorage.clear();
+    myStorage.setItem(item.id, JSON.stringify(item));
+    location.href="productdescription?id=" + item.id;
+}
 
 
 class ProductsController 
@@ -77,6 +86,9 @@ class ProductsController
             }
         }
 
+
+
+
     displayItem()
         {
             let productController = this;
@@ -98,7 +110,7 @@ class ProductsController
                             price: item.price,
                             imageUrl: item.imageUrl
                        };
-                        productController._items.push(itemObj);
+                        productController._items.push(itemObj);//create method and filter for search
                   });
                   productController.renderProductPage();
                 })

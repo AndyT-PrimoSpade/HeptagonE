@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
 
 <head>
     <meta charset="UTF-8">
@@ -39,11 +41,18 @@
                             <i class="bi-search"></i></button>
                     </form>
                 </div>
-                <div>
-                    <button id="loginBtn" type="submit" class="login btn-light rounded">
-                        <i class="bi-person-fill"></i>
-                        <a href="login.html"></a>
-                    </button>
+                <div sec:authorize="isAuthenticated()">
+                    <form id="logOut" th:action="@{/logout}" method="post">
+                        <i class="bi-person-fill"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> LOG OUT </a></i>
+                    </form>
+                </div>
+
+
+                <div sec:authorize="isAnonymous()">
+                    <i class="bi-person-fill"><a class="nav-link" th:href="@{login}"> </a></i>
+                </div>
+
+
                 </div>
             </div>
         </nav>
