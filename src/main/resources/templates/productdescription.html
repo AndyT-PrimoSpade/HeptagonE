@@ -28,13 +28,7 @@
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-furniture active">
-                <img src="img/consoletable1.jpg" class="d-block w-100" alt="Product Name A1">
-              </div>
-              <div class="carousel-furniture">
-                <img src="img/consoletable2.jpg" class="d-block w-100" alt="Product Name A2">
-              </div>
-              <div class="carousel-furniture">
-                <img src="img/consoletable1.jpg" class="d-block w-100" alt="Product Name A3">
+                <img id="productImg" src="img/consoletable1.jpg" class="d-block w-100" alt="Product Name A1">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -55,7 +49,7 @@
           <div class="row">
             <div class="col-md-12">
               <h1 id="productName">Name</h1>
-              <h4 class="productPrice" id="productPrice">price</h4>
+              <h4 class="productPrice" id="productPrice">$price</h4>
             </div>
              <div class="row">
               <div class="col-md-12">
@@ -64,17 +58,14 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <p class="productDimension">
-                <h6>Dimension: Length x Width x Height</h6>
-                <h6><h6 id="productLength">length</h6> x <h6 id="productWidth">Width</h6> x <h6 id="productHeight">Height</h6> cm</h6>
-                </p>
-                <p class ="productColor"><h6 id="productColor">Tan Brown</h6></p>
+                <div class="productDimension">
+                  <h6>Dimension: <span id="length">Length</span> x <span id="width">Width</span> x <span id="height">Height</span></h6>
+                </div>
               </div>
             </div>
             <div>
             <button type="submit" class="btn btn-secondary">Add to Cart </button>
           </div>
-
       </div>
       <!--End of product form-->
     </div>
@@ -90,8 +81,6 @@
     <div th:insert="fragments/footer.html :: footer"></div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/pdtDescription.js"></script>
-    <script src="js/productController.js"></script>
-    <script src="js/productListing.js"></script>
 
   </body>
 
