@@ -12,7 +12,7 @@
 <body>
     <header class="fixed-top">
         <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid collapse navbar-collapse">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
                     aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ml-auto mr-auto">
                         <li class="nav-furniture mx-4">
-                            <a class="nav-link active" aria-current="page" th:href="@{products}">Shop</a>
+                            <a class="nav-link" aria-current="page" th:href="@{products}">Shop</a>
                         </li>
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" href="service.html">Services</a>
@@ -33,25 +33,43 @@
                         </li>
                     </ul>
                 </div>
-                <div id="barSize">
+                
+                 <!-- <div id="barSize">
                     <form class="d-flex">
                         <input id="searchBar" class="form-control me-2" type="search" placeholder="Search"
                             aria-label="Search">
                         <button class="search-button rounded" id="searchBtn" type="submit">
                             <i class="bi-search"></i></button>
                     </form>
-                </div>
+                </div> -->
+
+            </div>
+                
+            <div class="dropdown">
+                  <button id="loginBtn" type="button" class="login btn-light rounded" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi-person-fill"></i>
+                    <a href="login.html"></a>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Login</a></li>
+                </ul>
+              </div>
+            
+                <!-- <div id="profilebox">
+                    <a class="login" href="#">Login</a>
+                    <br/>
+                    <a class="logout" href="#">Logout</a>
+                </div> -->
+
                 <div sec:authorize="isAuthenticated()">
                     <form id="logOut" th:action="@{/logout}" method="post">
                         <i class="bi-person-fill"><a class="nav-link" onclick="document.getElementById('logOut').submit();"> LOG OUT </a></i>
                     </form>
                 </div>
 
-
                 <div sec:authorize="isAnonymous()">
                     <i class="bi-person-fill"><a class="nav-link" th:href="@{login}"> </a></i>
                 </div>
-
 
                 </div>
             </div>
