@@ -26,17 +26,25 @@
                     <div class="text-center">
                         <h3>Sign In</h3>
                     </div>
-                    <form action="">
+                    <div th:if="${param.error}">
+                        Invalid username and password.
+                    </div>
+                    <div th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+
+                    <form th:action="@{/login}" method="post">
                         <div class="p-4">
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-secondary"><i
                                         class="bi bi-person-plus-fill text-white"></i></span>
-                                <input type="text" class="form-control" placeholder="Username">
+                                <input type="text" class="form-control"
+                                       placeholder="Username"id="username" name="username" required>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-secondary"><i
                                         class="bi bi-key-fill text-white"></i></span>
-                                <input type="password" class="form-control" placeholder="password">
+                                <input type="password" class="form-control" placeholder="password" id="password" name="password" required>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -54,6 +62,12 @@
                         </div>
                     </form>
                 </div>
+                <!--<div class="col-sm">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Logout" />
+                    </form>
+                </div>-->
+
             </div>
         </div>
     </div>
