@@ -1,21 +1,25 @@
 const createHTMLList = (index, name, description, price, imageURL) =>
 `
-<div class="col-lg-4 col-md-6 d-flex justify-content-center mb-5">
+<div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
     <div class="card">
-        <img class="card-img-top" src=${imageURL} alt="Product Item">
-        <div class="card-body">
-            <h4 class="card-title">${name}</h4>
-            <hr>
-            <div class="row">
-                <div class="col-lg-9">
-                    <p class="card-text text-start">${description}</p>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="mb-2 text-end"><span>$${price}</span></h6>
+        <div class="slide slidetop">
+            <div class="content">
+                <img class="card-img-top" src=${imageURL} alt="Product Item">
+            </div>
+        </div>
+        <div class="slide slidebtm">
+            <div class="content">
+                <div id="card-btm" class="card-body row">
+                    <div class="col-lg-9">
+                        <h4 class="card-title">${name}</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <p id="price" class="mb-2 text-end"><span>$${price}</span></p>
+                    </div>
+                    <hr>
                 </div>
                 <div id="btnStyle" class="d-grid gap-2 col-12 mx-0">
-                    <a id="${index}" class="btn btn-dark" href="#"
-                    data-toggle="modal" data-target="#productModal">View More Detail</a>
+                    <a id="${index}" class="btn btn-dark" href="#" data-toggle="modal" data-target="#productModal">View More Detail</a>
                 </div>
             </div>
         </div>
