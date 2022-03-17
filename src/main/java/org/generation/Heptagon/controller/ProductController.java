@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/product")
-
 public class ProductController {
 
     @Value("${image.folder}")
