@@ -1,4 +1,2 @@
 This is an eCommerce project.
-v1
-
-03/18 - testing
+ this is a test after re-adding gradle
