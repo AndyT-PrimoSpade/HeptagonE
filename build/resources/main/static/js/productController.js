@@ -57,7 +57,8 @@ class ProductsController
             formData.append('imageUrl', imageUrl);
             formData.append('imagefile',imageObject);
 
-           fetch('http://localhost:8080/product/add', {
+//           fetch('http://localhost:8080/product/add', {
+           fetch('https://heptagone.herokuapp.com/product/add', {
                  method: 'POST',
                  body: formData
                  })
@@ -99,7 +100,8 @@ class ProductsController
         {
             let productController = this;
             productController._items = [];
-            fetch('http://localhost:8080/product/all')
+//            fetch('http://localhost:8080/product/all')
+            fetch('https://heptagone.herokuapp.com/product/all')
                 .then((resp) => resp.json())
                 .then(function(data) {
                     console.log("2. receive data")
