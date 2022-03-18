@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="UTF-8">
@@ -30,8 +30,7 @@
         <div class="col">
           <h4 class="mb-3">Add Product</h4>
           <!--List of input id: name, type, description, price, length, width, height, colour, image1, image2, image3-->
-          <form id="addNewProduct" class="needs-validation"
-            novalidate>
+          <form id="addNewProduct" enctype="multipart/form-data">
             <!--Pdt Name Field-->
             <div>
               <label class="form-label">Product Name</label>
@@ -115,6 +114,7 @@
   <!-- Footer -->
   <div th:insert="fragments/footer.html :: footer"></div>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/productController.js"></script>
   <script src="js/productForm.js"></script>
 </body>
 
