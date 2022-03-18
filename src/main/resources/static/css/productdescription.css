@@ -1,0 +1,13 @@
+#productDescription {
+    height: 12.5rem;
+    font-size: 18px;
+}
+
+#productImg {
+    height: 45rem;
+    width: 40rem;
+    object-fit: cover;
+}
+.carousel-inner {
+    box-shadow: 0 1rem 2rem;
+}
