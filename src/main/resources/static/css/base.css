@@ -25,7 +25,7 @@ nav, footer {
     outline: none;
     background-color: #f7f7f7;
 }
-#loginBtn {
+#loginBtn, #homeBtn {
     font-size: 1.5rem;
     border: none;
     outline: none;
@@ -37,6 +37,13 @@ nav, footer {
     background: #231814;
     color: #f7f7f7;
 }
+
+#homeBtn:hover {
+    background: #231814;
+    color: #f7f7f7;
+ }
+
+
 #barSize {
     margin-right: 4rem;
     width: 80%;
@@ -64,7 +71,39 @@ nav, footer {
 .navbar-brand > a:hover {
     color: #A9A9A9;
 }
+
+/*SCROLL TO TOP CSS*/
+.scrollToTopBtn {
+  border-radius: 50%;
+  background-color: 577590;
+  border: none;
+  opacity: 0.5;;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 48px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Footer CSS */
+
 footer {
     background-color: #231814;
     color: #f7f7f7;

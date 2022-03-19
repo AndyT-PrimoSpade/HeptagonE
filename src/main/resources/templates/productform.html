@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 
 <head>
   <meta charset="UTF-8">
@@ -112,10 +112,12 @@
     </span>
   </main>
   <!-- Footer -->
+  <div th:insert="fragments/scrollTop.html :: scrollTop"></div>
   <div th:insert="fragments/footer.html :: footer"></div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/productController.js"></script>
   <script src="js/productForm.js"></script>
+  <script src="js/scrollTop.js"></script>
 </body>
 
 </html>

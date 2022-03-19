@@ -19,50 +19,54 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ml-auto mr-auto">
+
+                        <li class="mx-4">
+                            <button id="homeBtn" type="button" class="btn-light rounded">
+                                <a th:href="@{index}" class="bi bi-house-fill"></a>
+                            </button>
+                        </li>
+
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" aria-current="page" th:href="@{products}">Shop</a>
                         </li>
-                        <!-- PERHAPS CHANGE TO "CONTACT US"? OR REMOVE ENTIRELY
+
                         <li class="nav-furniture mx-4">
-                            <a class="nav-link" href="service.html">Services</a>
+                            <a class="nav-link" th:href="@{contactUs}">Contact Us</a>
                         </li>
-                        -->
+
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" th:href="@{aboutus}">About Us</a>
                         </li>
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" th:href="@{productform}">Form</a>
                         </li>
-                    </ul>
-                </div>
-                
-                 <!-- <div id="barSize">
-                    <form class="d-flex">
-                        <input id="searchBar" class="form-control me-2" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="search-button rounded" id="searchBtn" type="submit">
-                            <i class="bi-search"></i></button>
-                    </form>
-                </div> -->
 
-                <div class="dropdown">
-                    <button id="loginBtn" type="button" class="login btn-light rounded" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi-person-fill"></i>
-                        <!--<a href="login.html"></a>-->
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="dropdownMenuButton">
+                        <li class="nav-furniture mx-4">
 
-                        <li><a sec:authorize="isAnonymous()" class="nav-link"
-                               th:href="@{login}">
-                            Login</a></li>
+                            <button id="loginBtn" type="button" class="login btn-light rounded"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi-person-fill"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="dropdownMenuButton">
 
-                        <li sec:authorize="isAuthenticated()">
-                            <form id="logOut" th:action="@{/logout}" method="post">
-                                <a class="nav-link"
-                                   onclick="document.getElementById('logOut').submit();">
-                                    <i class="bi bi-box-arrow-right "> LOGOUT
-                                    </i></a></form></li>
+                                <li class="mx-4"><a sec:authorize="isAnonymous()" class="nav-link"
+                                       th:href="@{login}">
+                                    Login</a></li>
+
+                                <li sec:authorize="isAuthenticated()" class="mx-4">
+                                    <form id="logOut" th:action="@{/logout}" method="post">
+                                        <a class="nav-link"
+                                           onclick="document.getElementById('logOut').submit();">
+                                            <i class="bi bi-box-arrow-right "> LOGOUT
+                                            </i></a>
+                                    </form>
+                                </li>
+                            </li>
+                        </ul>
+
+
+
                     </ul>
                 </div>
 

@@ -91,10 +91,12 @@
       </div>
     </div>
   </div>
+  <div th:insert="fragments/scrollTop.html :: scrollTop"></div>
 </main>
 <!-- Footer -->
 <div th:insert="fragments/footer.html :: footer"></div>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/scrollTop.js"></script>
 <!-- <script const searchButton=document.getElementById('search-button'); const
   searchInput=document.getElementById('search-input'); searchButton.addEventListener('click', ()=> {
       const inputValue = searchInput.value;
