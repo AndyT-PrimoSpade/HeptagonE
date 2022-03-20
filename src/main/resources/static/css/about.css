@@ -1,0 +1,72 @@
+
+/*Team Bio CSS*/
+mark {
+  background-color: rgba(72,191,227,0.1);
+}
+.team{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+.teamHeader{
+    text-align:center;
+    text-transform: capitalize;
+    margin:10px 0;
+    position: relative;
+}
+.TeamHeader::after{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-image: linear-gradient(to left, transparent 5%, #726a95);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.teamRow{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.teamMember{
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    max-width:300px;
+    transition: all 0.3s;
+}
+
+.teamMember:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-20px);
+}
+
+.teamMember img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+
+.teamMember h3{
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.teamMember p{
+    font-size: 15px;
+    line-height: 1.6;
+}
