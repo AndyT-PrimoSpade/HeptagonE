@@ -33,6 +33,10 @@ nav, footer {
     color: #231814;
     margin-right: 1rem;
 }
+#loginBtn .i {
+
+}
+
 #loginBtn:hover {
     background: #231814;
     color: #f7f7f7;
