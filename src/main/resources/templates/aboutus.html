@@ -7,96 +7,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="stylesheet" href="css/about.css" />
   <title>Heptagon Webpage</title>
   <meta name="description" content="Heptagon Online Shop">
   <meta name="keywords" content="Online Shop, Heptagon, Wooden">
 </head>
+
 <body>
-<!-- Header -->
-<!-- Navbar -->
-<div th:insert="fragments/navbar.html :: navbar"></div>
-<div th:insert="fragments/navbar.html :: brandname"></div>
-<!-- Main Body -->
-<main>
-  <!--START OF GET TO KNOW US-->
-  <section>
+  <!-- Header -->
+  <!-- Navbar -->
+  <div th:insert="fragments/navbar.html :: navbar"></div>
+  <div th:insert="fragments/navbar.html :: brandname"></div>
+  <!-- Main Body -->
+  <main>
+    <!--START OF GET TO KNOW US-->
+    <section>
 
-    <div class="container-fluid mt-3">
-      <div class="jumbotron">
-        <div class="row mb-4">
+      <div class="container-fluid mt-3">
+        <div class="jumbotron">
+          <div class="row mb-4">
             <h1 class="text-center"><mark>Get To Know Us</mark></h1>
-          <div>
-            <p class="text-center"><strong>This is a basic eCommerce website project made using different programming languages such as HTML, BootStrap, JavaScript, Java and Spring Boot.
-              It is a responsive webpage containing landing page, login authentication, product page and add product admin page.
-            </strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!--END OF WHO WE ARE-->
-
-  <!--START OF WHO WE ARE-->
-  <section>
-    <div class="container">
-      <div class="row">
-          <div class="col mx-auto">
-            <img src="img/teams.jpg">
-          </div>
-          <div class="col mt-3 mx-auto">
-            <h2> 😁 Who We Are?</h2>
-            <p>We are a group of passionate Full-Stack Developers looking to improve our coding knowledge. This is an
-              ongoing project. We will improve on the site to improve the user experience.
-            </p>
+            <div>
+              <p class="text-center"><strong>This is a basic eCommerce website project made using different programming
+                  languages such as HTML, BootStrap, JavaScript, Java and Spring Boot.
+                  It is a responsive webpage containing landing page, login authentication, product page and add product
+                  admin page.
+                </strong></p>
             </div>
-      </div>
-    </div>
-  </section>
-  <!--END OF WHO WE ARE-->
-
-  <!--START OF PERSONAL BIO-->
-  <section class=>
-    <div clas="container">
-      <div class="row team mt-4">
-        <h2 class="teamHeader">Meet the Team</h2>
-        <div class="teamRow">
-          <div class="teamMember">
-            <img src="img/traciapic.jpg">
-            <h3>Tracia Wee</h3>
-            <p> Constantly upgrading her tech knowledge so that she may network with others without getting lost in tech lingo. Loves hiking, gaming and good bois 🐶</p>
-            <a href="https://github.com/traciaw" class="btn btn-outline-secondary">GitHub</a>
-            <a href="https://www.linkedin.com/in/traciaw" class="btn btn-outline-secondary">LinkedIn</a>
-          </div>
-          <div class="teamMember">
-            <img src="img/teams.jpg">
-            <h3>Andy Tan</h3>
-            <p>Your personal favorite thing, interest, dog, cat, hamster, whatever... PERSONAL
-              HAPPY STUFF<br>Blah blah blah<br>blah blah blah</p>
-            <a href="https://github.com/AndyT-PrimoSpade" class="btn btn-outline-secondary">GitHub</a>
-            <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
-          </div>
-          <div class="teamMember">
-            <img src="img/teams.jpg">
-            <h3>Melvin Lim</h3>
-            <p>Your personal favorite thing, interest, dog, cat, hamster, whatever... PERSONAL HAPPY STUFF<br>Blah blah blah<br>blah blah blah</p>
-            <a href="https://github.com/melvin-githu" class="btn btn-outline-secondary">GitHub</a>
-            <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
           </div>
         </div>
       </div>
-    </div>
+      <!--END OF WHO WE ARE-->
 
-  </section>
-  <!--END OF PERSONAL BIO-->
-</main>
-<!-- Footer -->
-<div th:insert="fragments/scrollTop.html :: scrollTop"></div>
-<div th:insert="fragments/footer.html :: footer"></div>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/scrollTop.js"></script>
-<!-- <script const searchButton=document.getElementById('search-button'); const
+      <!--START OF WHO WE ARE-->
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col mx-auto">
+              <img src="img/teams.jpg">
+            </div>
+            <div class="col mt-3 mx-auto">
+              <h2> 😁 Who We Are?</h2>
+              <p>We are a group of passionate Full-Stack Developers looking to improve our coding knowledge. This is an
+                ongoing project. We will improve on the site to improve the user experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END OF WHO WE ARE-->
+
+      <!--START OF PERSONAL BIO-->
+      <section class=>
+        <div clas="container">
+          <div class="row team mt-4">
+            <h2 class="teamHeader">Meet the Team</h2>
+            <div class="teamRow">
+              <div class="teamMember">
+                <img src="img/traciapic.jpg">
+                <h3>Tracia Wee</h3>
+                <p> Constantly upgrading her tech knowledge so that she may network with others without getting lost in
+                  tech lingo. Loves hiking, gaming and good bois 🐶</p>
+                <a href="https://github.com/traciaw" class="btn btn-outline-secondary">GitHub</a>
+                <a href="https://www.linkedin.com/in/traciaw" class="btn btn-outline-secondary">LinkedIn</a>
+              </div>
+              <div class="teamMember">
+                <img src="img/teams.jpg">
+                <h3>Andy Tan</h3>
+                <p>Your personal favorite thing, interest, dog, cat, hamster, whatever... PERSONAL
+                  HAPPY STUFF<br>Blah blah blah<br>blah blah blah</p>
+                <a href="https://github.com/AndyT-PrimoSpade" class="btn btn-outline-secondary">GitHub</a>
+                <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
+              </div>
+              <div class="teamMember">
+                <img src="img/teams.jpg">
+                <h3>Melvin Lim</h3>
+                <p>Your personal favorite thing, interest, dog, cat, hamster, whatever... PERSONAL HAPPY STUFF<br>Blah
+                  blah blah<br>blah blah blah</p>
+                <a href="https://github.com/melvin-githu" class="btn btn-outline-secondary">GitHub</a>
+                <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!--END OF PERSONAL BIO-->
+  </main>
+  <!-- Footer -->
+  <div th:insert="fragments/scrollTop.html :: scrollTop"></div>
+  <div th:insert="fragments/footer.html :: footer"></div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/scrollTop.js"></script>
+  <script src="js/base.js"></script>
+  <!-- <script const searchButton=document.getElementById('search-button'); const
   searchInput=document.getElementById('search-input'); searchButton.addEventListener('click', ()=> {
       const inputValue = searchInput.value;
       alert(inputValue);
