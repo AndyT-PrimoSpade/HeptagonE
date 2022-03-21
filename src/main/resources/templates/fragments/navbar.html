@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 
 <head>
@@ -19,76 +19,61 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ml-auto mr-auto">
-
                         <li class="mx-4">
                             <button id="homeBtn" type="button" class="btn-light rounded">
                                 <a th:href="@{index}" class="bi bi-house-fill"></a>
                             </button>
                         </li>
-
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" aria-current="page" th:href="@{products}">Shop</a>
                         </li>
-
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" th:href="@{contactUs}">Contact Us</a>
                         </li>
-
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" th:href="@{aboutus}">About Us</a>
                         </li>
                         <li class="nav-furniture mx-4">
                             <a class="nav-link" th:href="@{productform}">Form</a>
                         </li>
-
-                        <li class="nav-furniture mx-4">
-
-                            <button id="loginBtn" type="button"
-                                    class="login btn-light rounded"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi-person-fill"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end"
-                                aria-labelledby="dropdownMenuButton">
-
-                                <li class="mx-4"><a sec:authorize="isAnonymous()" class="nav-link"
-                                       th:href="@{login}">
-                                    Login</a></li>
-
-                                <li sec:authorize="isAuthenticated()" class="mx-4">
-                                    <form id="logOut" th:action="@{/logout}" method="post">
-                                        <a class="nav-link"
-                                           onclick="document.getElementById('logOut').submit();">
-                                            <i class="bi bi-box-arrow-right "> Logout
-                                            </i></a>
-                                    </form>
-                                </li>
-                            </li>
-                        </ul>
-
-
-
                     </ul>
                 </div>
-
-            </div>
-
-            
-                <!-- <div id="profilebox">
-                    <a class="login" href="#">Login</a>
-                    <br/>
-                    <a class="logout" href="#">Logout</a>
-                </div> -->
-
-
+                <div class="collapse navbar-collapse justify-content-end" id="navright">
+                    <ul class="navbar-nav">
+                        <li class="nav-furniture">
+                            <button id="loginBtn" type="button" class="login btn-light rounded"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi-person-fill"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                <li class="mx-4"><a sec:authorize="isAnonymous()" class="nav-link"
+                                        th:href="@{login}">Login</a></li>
+                                <li sec:authorize="isAuthenticated()" class="mx-4">
+                                    <form id="logOut" th:action="@{/logout}" method="post">
+                                        <a class="nav-link" onclick="document.getElementById('logOut').submit();">
+                                            <i class="bi bi-box-arrow-right ">Logout</i></a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-        <section th:fragment="brandname" class="text-center navbar-brand">
+        <section th:fragment="brandname">
+            <div class="text-center navbar-brand">
                 <a th:href="@{index}">⬡ℍEPTAGON</a>
+            </div>
+            <div id="styleSection" class="text-center">
+                <div id="eyeball">
+                    <svg width="30" height="30" class="eye">
+                        <circle cx="15" cy="8" r="15" fill="#f7f7f7" class="eyeball" />
+                        <circle cx="15" cy="15" r="8" fill="#000000" class="pupil" />
+                    </svg>
+                </div>
+            </div>
         </section>
     </header>
-
 </body>
 
 </html>
