@@ -1,6 +1,6 @@
 /*TALK TO US CSS*/
 #contact{
-background:url("../img/talktous.jpg")50% 0 repeat-y fixed;
+background:url("../img/talktous.jpg")35% 0 repeat-y fixed;
  background-size: cover;
  background-position: center center;
  position: relative;
@@ -69,13 +69,13 @@ line-height: 45px;
 }
 
 .social-links a {
-  width: 55px;
-  height: 55px;
+  width: 35px;
+  height: 35px;
   text-align: center;
   text-decoration: none;
   color: #000;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-  margin: 0 30px;
+  margin: 0 20px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -83,8 +83,8 @@ line-height: 45px;
 }
 
 .social-links a .fab {
-  font-size: 20px;
-  line-height: 55px;
+  font-size: 15px;
+  line-height: 40px;
   position: relative;
   z-index: 10;
   transition: color 0.5s;
@@ -119,10 +119,16 @@ line-height: 45px;
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    #contact .form-control{
+        margin: 8px;
+        }
 }
 @media screen and (max-width: 430px) {
     #social-links
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
+     #contact .form-control{
+            margin: 5px;
+            }
 }
