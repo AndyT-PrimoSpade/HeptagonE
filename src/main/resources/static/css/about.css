@@ -33,7 +33,7 @@ mark {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .teamMember{
@@ -69,4 +69,7 @@ mark {
 .teamMember p{
     font-size: 15px;
     line-height: 1.6;
+    /*height control*/
+        max-height: 150px;
+        overflow: hidden;
 }
