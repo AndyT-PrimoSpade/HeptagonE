@@ -5,6 +5,9 @@
     #feature {
         margin-bottom: 3rem;
     }
+    #imageshowcase1, #imageshowcase2 {
+        height: 28rem;
+    }
 }
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -13,4 +16,9 @@ a, a:hover, a:focus, a:active {
 .imageshowcase {
     height: 40rem;
     object-fit: cover;
+}
+canvas {
+    z-index: 99; 
+    transition-duration:1s;
+    transition-delay:1s;
 }

@@ -4,15 +4,26 @@
 }
 #productImg {
     height: 40rem;
-    width: 37rem;
+    width: 38rem;
     object-fit: cover;
 }
 .carousel-inner {
-    box-shadow: 0 1rem 2rem;
+    box-shadow: 0 1rem 1.5rem;
 }
 #backbtn {
     margin-bottom: 2rem;
     width: 3rem;
     border: none;
     background-color: #f7f7f7;
+}
+
+@media screen and (max-width: 770px) {
+    #productImg {
+        height: 30rem;
+        padding: none;
+        margin-bottom: 1rem;
+    }
+    .pe-5 {
+        padding-right: none;
+    }
 }

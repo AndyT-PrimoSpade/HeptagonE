@@ -22,8 +22,30 @@
 #price {
     font-weight: bold;
 }
-#search {
-    padding-left: 25rem;
+#searchBar:focus {
+    border-color: #231814;
+    box-shadow: none;
+}
+#searchBar {
+    border-radius: 15px;;
+    /* text-align: center; */
+    font-size: 0.9rem;
+}
+#searchBtn {
+    border: none;
+    padding: none;
+    margin: none;
+    outline: none;
+    background-color: #f7f7f7;
+}
+#barSize {
+    margin-right: 4rem;
+    height: 2rem;
+    width: 22.5rem;
+    margin: auto;
+}
+#barSize i {
+    font-size: 1.15rem;
 }
 
 .container .card .slide.slidetop {
@@ -71,5 +93,16 @@
     left: 50%;
     transform: translateX(-50%);
     background: #231814;
+}
+@media screen and (max-width: 991px) {
+    #barSize {
+        margin: auto;
+        height: 2rem;
+        width: 20rem;
+    }
+    #missings {
+        display: none;
+    }
+    
 }
 
