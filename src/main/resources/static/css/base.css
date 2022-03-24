@@ -23,18 +23,7 @@ nav, footer {
 .nav-link {
     font-weight: bold;
 }
-#searchBar {
-    border-radius: 15px;;
-    /* text-align: center; */
-    font-size: 0.9rem;
-}
-#searchBtn {
-    border: none;
-    padding: none;
-    margin: none;
-    outline: none;
-    background-color: #f7f7f7;
-}
+
 #loginBtn, #homeBtn {
     font-size: 1.5rem;
     border: none;
@@ -51,18 +40,7 @@ nav, footer {
     background: #231814;
     color: #f7f7f7;
 }
-#barSize {
-    margin-right: 4rem;
-    width: 80%;
-    height: 2rem;
-}
-#barSize i {
-    font-size: 1.15rem;
-}
-#searchBar:focus {
-    border-color: #231814;
-    box-shadow: none;
-}
+
 #styleSection {
     background-color: #231814;
     opacity: 90%;
@@ -165,21 +143,34 @@ footer a:hover {
     font-size: 0.75rem;
 }
 @media screen and (max-width: 991px) {
-    #barSize {
-        width: 55%;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
     #newsLetter {
         margin-bottom: 1rem;
     }
     footer {
         text-align: center;
     }
+    #homeBtn {
+        display: none;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    #loginBtn {
+        display: none;
+    }
 }
 @media screen and (max-width: 430px) {
     #newsLetter {
         width: 90%;
         margin: auto;
+    }
+    #homeBtn {
+        display: none;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    #loginBtn {
+        display: none;
     }
 }

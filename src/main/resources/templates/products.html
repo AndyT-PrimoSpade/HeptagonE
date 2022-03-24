@@ -11,10 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/profilebox.css" />
     <link rel="stylesheet" href="css/shop.css" />
-
+    <link rel="icon" href="img/favicon.png">
 
     <title>Heptagon Webpage</title>
     <meta name="description" content="Heptagon Online Shop">
@@ -31,13 +29,13 @@
     <main>
         <div class="container-fluid">
             <div id="filter" class="row mb-3">
-                <div class="col-lg-6 mt-4 ps-5">
+                <div id="missings" class="col-lg-6 col-md-12 mt-4">
                 </div>
-                <div id="search" class="col-lg-6 mt-4">
+                <div id="search" class="col-lg-6 col-md-12 mt-4">
                     <div id="barSize">
                         <form class="d-flex">
                             <input id="searchBar" class="form-control me-2" type="search" placeholder="Search Products"
-                                aria-label="Search">
+                                aria-label="Search" data-search>
                             <button class="search-button rounded" id="searchBtn" type="submit">
                                 <i class="bi-search"></i></button>
                         </form>
