@@ -1,39 +1,58 @@
-.whoWeArePic{
-background-image: url("/img/teams.jpg");
-  background-size: cover;
-  background-position: center center;
-   position: relative;
 
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
-                0 2px 2px rgba(0,0,0,0.12),
-                0 4px 4px rgba(0,0,0,0.12),
-                0 8px 8px rgba(0,0,0,0.12),
-                0 16px 16px rgba(0,0,0,0.12);
-}
 /*Team Bio CSS*/
-mark {
-  background-color: rgba(72,191,227,0.1);
+#teamImage {
+    height: 30rem;
+    width: 40rem;
+    object-fit: cover;
 }
-.team{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
+
+@media screen and (max-width: 1400px) {
+    #teamImage {
+        margin: none;
+        padding: none;
+        width: 100%;
+
+        object-fit: cover;
+    }
+    #introText {
+        margin: none;
+    }
+    .row {
+        --bs-gutter-x: 0;
+    }
 
 }
-.teamHeader{
+@media screen and (max-width: 770px) {
+    #introText {
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 430px) {
+    #teamImage {
+        height: 25rem;
+    }
+}
+
+
+.team{
+    margin-bottom: 2rem;
+}
+#teamTop {
     text-align:center;
     text-transform: capitalize;
-    margin:10px 0;
+    padding: 1rem;
     position: relative;
 }
-.TeamHeader::after{
+.teamHeader {
+    text-align:center;
+    text-transform: capitalize;
+    padding: 1.5rem;
+    position: relative;
+}
+.teamHeader::after{
     content: "";
     position: absolute;
-    width: 20%;
+    width: 40%;
     height: 2px;
     background-image: linear-gradient(to left, transparent 5%, #726a95);
     bottom: -10px;
@@ -44,14 +63,13 @@ mark {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px 0;
 }
 
 .teamMember{
     flex: 1 1 250px;
     margin: 20px;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
     cursor: pointer;
     max-width:300px;
     transition: all 0.3s;
@@ -74,13 +92,124 @@ mark {
 
 .teamMember h3{
     text-transform: uppercase;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .teamMember p{
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.6;
     /*height control*/
-        max-height: 150px;
-        overflow: hidden;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+/* Fly over about us intro */
+
+.missings {
+    display: hidden;
+}
+.con{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+div span{
+    float: left; 
+}
+.word span{
+    transform: scale(0)
+}
+.word span:first-of-type{
+    animation: rotateAndScale 500ms ease-in-out 500ms 1 both;
+}
+.word span:nth-of-type(2){
+    animation: rotateAndScale 500ms ease-in-out 1000ms 1 both;
+}
+.word span:nth-of-type(3){
+    animation: rotateAndScale 500ms ease-in-out 1500ms 1 both;
+}
+.word span:nth-of-type(4){
+    animation: rotateAndScale 500ms ease-in-out 2000ms 1 both;
+}
+.word span:nth-of-type(5){
+    animation: rotateAndScale 500ms ease-in-out  2500ms 1 both;
+}
+.word span:nth-of-type(6){
+    animation: rotateAndScale 500ms ease-in-out 3000ms 1 both;
+}
+.word span:nth-of-type(7){
+    animation: rotateAndScale 500ms ease-in-out 3500ms 1 both;
+}
+.word span:nth-of-type(8){
+    animation: rotateAndScale 500ms ease-in-out 4000ms 1 both;
+}
+.word span:nth-of-type(9){
+    animation: rotateAndScale 500ms ease-in-out 4500ms 1 both;
+}
+.word span:nth-of-type(10){
+    animation: rotateAndScale 500ms ease-in-out 5000ms 1 both;
+}
+.word span:nth-of-type(11){
+    animation: rotateAndScale 500ms ease-in-out 5500ms 1 both;
+}
+  
+
+@keyframes flipAndSlide{
+    0%{
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+    25%{
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+    75%{
+        opacity: 0; 
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes flipInOut{
+    0%{
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+    25%{
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+    75%{
+        opacity: 0; 
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg);
+    }
+}
+@keyframes rotateAndScale{
+    from{
+        transform: rotate(-360deg) scale(0);
+        opacity:0;
+        
+    }
+    to{
+        transform: rotate(0deg) scale(1);
+        opacity:1;
+    }
 }

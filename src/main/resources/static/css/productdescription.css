@@ -11,7 +11,7 @@
     box-shadow: 0 1rem 1.5rem;
 }
 #backbtn {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: 3rem;
     border: none;
     background-color: #f7f7f7;
@@ -21,7 +21,7 @@
     #productImg {
         height: 30rem;
         padding: none;
-        margin-bottom: 1rem;
+        
     }
     .pe-5 {
         padding-right: none;
