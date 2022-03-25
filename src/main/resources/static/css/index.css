@@ -22,3 +22,11 @@ canvas {
     transition-duration:1s;
     transition-delay:1s;
 }
+.featureimage {
+    transition: all 0.3s;
+}
+
+.featureimage:hover{
+    box-shadow: 0 1rem 1.5rem;
+    transform: translateY(-20px);
+}

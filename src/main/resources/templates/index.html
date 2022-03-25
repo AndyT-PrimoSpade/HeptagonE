@@ -79,16 +79,16 @@
       </div>
       <div id="feature" class="row">
         <div class="col-md-4 mt-lg-5 mt-2">
-          <img src="img/feature1.jpg" alt="Feature Table" class="img-fluid">
+          <img src="img/feature1.jpg" alt="Feature Table" class="img-fluid featureimage">
         </div>
         <div class="col-md-4 mb-lg-5 mt-2">
-          <img src="img/feature2.png" alt="Feature Table" class="img-fluid">
+          <img src="img/feature2.png" alt="Feature Table" class="img-fluid featureimage">
         </div>
         <div class="col-md-4 mt-lg-5 mt-2">
-          <img src="img/feature3.png" alt="Feature Table" class="img-fluid">
+          <img src="img/feature3.png" alt="Feature Table" class="img-fluid featureimage">
         </div>
         <div id="mobileView" class="col-md-12 mt-lg-5 mb-lg-5 mt-2 mb-2">
-          <img src="img/feature5.png" alt="Feature Table" class="img-fluid center-block d-block mx-auto">
+          <img src="img/feature5.png" alt="Feature Table" class="img-fluid center-block d-block mx-auto featureimage">
         </div>
       </div>
     </div>
@@ -100,6 +100,23 @@
   <script src="js/scrollTop.js"></script>
   <script src="js/base.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('.first-button').on('click', function () {
+
+        $('.animated-icon1').toggleClass('open');
+      });
+      $('.second-button').on('click', function () {
+
+        $('.animated-icon2').toggleClass('open');
+      });
+      $('.third-button').on('click', function () {
+
+        $('.animated-icon3').toggleClass('open');
+      });
+    });
+  </script>
 </body>
 
 </html>
