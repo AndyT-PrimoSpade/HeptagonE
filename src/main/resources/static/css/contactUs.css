@@ -1,24 +1,24 @@
 /*TALK TO US CSS*/
 #contact{
-background:url("../img/talktous.jpg")35% 0 repeat-y fixed;
- background-size: cover;
- background-position: center center;
- position: relative;
- }
+  background:url("../img/talktous.jpg")35% 0 repeat-y fixed;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
 
 #contact .form-control{
-border-style: none;
-box-shadow: none;
-font-size:18px;
-font-weight: normal;
-margin-bottom::22px;
- }
+  border-style: none;
+  box-shadow: none;
+  font-size:18px;
+  font-weight: normal;
+  margin-bottom: 22px;
+}
 #contact .form-control:focus{
-border-color: #d9d9d9;
+  border-color: #d9d9d9;
 }
 #contact input{
-height: 55px;
-line-height: 45px;
+  height: 55px;
+  line-height: 45px;
 }
 
 .contactBtn {
@@ -124,11 +124,11 @@ line-height: 45px;
         }
 }
 @media screen and (max-width: 430px) {
-    #social-links
+    #social-links {
         width: 80%;
         margin: auto;
     }
-     #contact .form-control{
-            margin: 5px;
-            }
+    #contact .form-control{
+        margin: 5px;
+    }
 }
