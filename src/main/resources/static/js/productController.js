@@ -85,7 +85,7 @@ class ProductsController
                 productHTMLList.push(productHTML);
             }
             const pHTML = productHTMLList.join('\n');
-            document.querySelector('#cardSection').innerHTML = pHTML;
+            document.querySelector('#cardSection').innerHTML = pHTML; //reuse in below searchPdt as ''
             for (let i=0; i<this._items.length; i++)
             {
                 const item = this._items[i];
@@ -127,4 +127,27 @@ class ProductsController
                     console.log(error);
                 });
         }
+        filterPdt(searchString) //filter() removes items from array
+        {
+            //console.log(searchString)//OK
+            let tempAllItems = this._items;//save all items first one side
+            let filteredItem= this._items.filter((item)=>{ //filter item with criteria
+            return(
+               item.name.toLowerCase().includes(searchString) ||
+               item.description.toLowerCase().includes(searchString) ||
+               item.type.toLowerCase().includes(searchString)
+                );
+           });
+           //if criteria met, return item.
+           if (filteredItem.length > 0) {
+               console.log('Criteria Met')//OK
+               this._items = filteredItem;
+               this.renderProductPage(); //renders page again
+            }//if no criteria met, return nothing ('')->from renderProductPage
+            else if (typeof filteredItem != "undefined") {
+            document.querySelector('#cardSection').innerHTML = '';
+            }
+            this._items = tempAllItems //show initial items prior to filter()
+        }
+
 }
