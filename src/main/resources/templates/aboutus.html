@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <title>About Us</title>
@@ -27,11 +27,10 @@
   <!-- Main Body -->
   <main>
     <!--START OF GET TO KNOW US-->
-    <section>
-
+    <div id="topSection">
       <div class="container-fluid mt-3">
         <div class="jumbotron">
-          <div class="row mb-4">
+          <div class="row mb-3">
             <h2 id="teamTop" class="text-center">
               <div class="con">
                 <span class="word">
@@ -53,73 +52,71 @@
         </div>
       </div>
       <!--END OF WHO WE ARE-->
-
       <!--START OF WHO WE ARE-->
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 mx-auto">
-              <img id="teamImage" src="img/teams.jpg" class="rounded">
-            </div>
-            <div id="introText" class="col-lg-6 col-md-12 mx-auto">
-              <p><strong>This is a basic eCommerce website project made using different programming
-                  languages such as HTML, BootStrap, JavaScript, Java and Spring Boot.
-                  It is a responsive webpage containing landing page, login authentication, product page and add product
-                  admin page.
-                  <br>This is an ongoing project. We will continuously work on the site to improve the
-                  user experience.</strong></p>
-              <br />
-              <h2> 😁 Who We Are?</h2>
-              <p>We are a group of passionate Full-Stack Developers looking to improve our coding
+      <div class="container">
+        <div class="row">
+          <div id="introText" class="col-lg-6 col-md-12 mx-auto">
+            <p><strong>This is a basic eCommerce website project made using different programming
+                languages such as HTML, BootStrap, JavaScript, Java and Spring Boot.
+                It is a responsive webpage containing landing page, login authentication, product page and add product
+                admin page.
+                <br>This is an ongoing project. We will continuously work on the site to improve the
+                user experience.</strong></p>
+            <br />
+            <h2> 😁 Who We Are?</h2>
+            <p><strong>We are a group of passionate Full-Stack Developers looking to improve our coding
                 knowledge.<br>
                 We started out at the start of 2022 under Generation Singapore in
                 collaboration with Temasek Polytechnic and Microsoft.<br>
-                Special thanks to Jean Looi for her guidance and unwavering support.
+                Special thanks to our lecturer: Jean Looi for her guidance and unwavering support.
+              </strong></p>
+          </div>
+          <div class="col-lg-6 col-md-12 mx-auto">
+            <!-- <img id="teamImage" src="img/teams.jpg" class="rounded"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF WHO WE ARE-->
+    <!--START OF PERSONAL BIO-->
+    <section class="team">
+      <div clas="container">
+        <div class="row team mt-4">
+          <h2 class="teamHeader">Meet the Team</h2>
+          <div class="teamRow">
+            <div class="teamMember">
+              <img src="img/traciapic.jpg">
+              <h3>Tracia Wee</h3>
+              <p> Constantly upgrading her tech knowledge so that she may network with others without getting lost in
+                tech lingo. Loves hiking, gaming and good bois 🐶</p>
+              <a href="https://github.com/traciaw" class="btn btn-outline-secondary">GitHub</a>
+              <a href="https://www.linkedin.com/in/traciaw" class="btn btn-outline-secondary">LinkedIn</a>
+            </div>
+            <div class="teamMember">
+              <img src="img/AndyDP.PNG">
+              <h3>Andy Tan</h3>
+              <p>Always curious about analysis in all data and how to use them to solve problems.
+                <br>Keen to learn new things even when it is useless. 😭
+                <br>Love to play game during free time.
               </p>
+              <a href="https://github.com/AndyT-PrimoSpade" class="btn btn-outline-secondary">GitHub</a>
+              <a href="https://www.linkedin.com/in/ydnaprimo/" class="btn btn-outline-secondary">LinkedIn</a>
+            </div>
+            <div class="teamMember">
+              <img src="img/teams.jpg">
+              <h3>Melvin Lim</h3>
+              <p>"It's not the size of the dog in the fight, it's the size of the fight in the dog."
+                <br>
+                -Mark Twain
+              </p>
+              <a href="https://github.com/melvin-githu" class="btn btn-outline-secondary">GitHub</a>
+              <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
             </div>
           </div>
         </div>
-      </section>
-      <!--END OF WHO WE ARE-->
-
-      <!--START OF PERSONAL BIO-->
-      <section class="team">
-        <div clas="container">
-          <div class="row team mt-4">
-            <h2 class="teamHeader">Meet the Team</h2>
-            <div class="teamRow">
-              <div class="teamMember">
-                <img src="img/traciapic.jpg">
-                <h3>Tracia Wee</h3>
-                <p> Constantly upgrading her tech knowledge so that she may network with others without getting lost in
-                  tech lingo. Loves hiking, gaming and good bois 🐶</p>
-                <a href="https://github.com/traciaw" target="_blank" class="btn btn-outline-secondary">GitHub</a>
-                <a href="https://www.linkedin.com/in/traciaw" target="_blank" class="btn btn-outline-secondary">LinkedIn</a>
-              </div>
-              <div class="teamMember">
-                <img src="img/AndyDP.PNG">
-                <h3>Andy Tan</h3>
-                <p>Always curious about analysis in all data and how to use them to solve problems.
-                  <br>Keen to learn new things even when it is useless. 😭
-                  <br>Love to play game during free time.
-                </p>
-                <a href="https://github.com/AndyT-PrimoSpade" target="_blank" class="btn btn-outline-secondary">GitHub</a>
-                <a href="https://www.linkedin.com/in/ydnaprimo/" target="_blank" class="btn btn-outline-secondary">LinkedIn</a>
-              </div>
-              <div class="teamMember">
-                <img src="img/mushroom.jpg">
-                <h3>Melvin Lim</h3>
-                <p>"A snooze button is a poor substitute for no alarm clock at all."
-                </p>
-                <a href="https://github.com/melvin-githu" target="_blank" class="btn btn-outline-secondary">GitHub</a>
-                <a href="#" class="btn btn-outline-secondary">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!--END OF PERSONAL BIO-->
+      </div>
+    </section>
+    <!--END OF PERSONAL BIO-->
   </main>
   <!-- Footer -->
   <div th:insert="fragments/scrollTop.html :: scrollTop"></div>
@@ -127,6 +124,12 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/scrollTop.js"></script>
   <script src="js/base.js"></script>
+  <!-- <script const searchButton=document.getElementById('search-button'); const
+  searchInput=document.getElementById('search-input'); searchButton.addEventListener('click', ()=> {
+      const inputValue = searchInput.value;
+      alert(inputValue);
+    });
+  </script> -->
 </body>
 
 </html>
