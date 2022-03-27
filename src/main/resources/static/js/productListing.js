@@ -12,5 +12,5 @@ function handleSearch(e) {
     productsControl.filterPdt(searchString)
 }
 searchBar.addEventListener('keyup', handleSearch); //search on keyup event
-document.getElementById("searchBtn").addEventListener("click", function(e){e.preventDefault()});
+// document.getElementById("searchBtn").addEventListener("click", function(e){e.preventDefault()});
 loadData();
