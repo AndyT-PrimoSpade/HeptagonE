@@ -52,19 +52,6 @@
 
 - Creating the Navbar design, Eyeball feature & Responsive design.
 
-### **About Us Page**
-
-- Static Page about us page that starts with a short intro about this project.
-
-- Next, we have a team overview intro about our team.
-
-- Below we have our team profiles that also have the same hover effect as the home page feature product. 
-- In our team profile is a short bio, photo with our GitHut & LinkedIn button.
-
-#### **Page Challenge**
-
-...
-
 <br />
 
 ### **Products Page** 
@@ -90,6 +77,21 @@
 #### **Page Challenge**
 
 - To pass the data from the product page & dynamic display the product user clicked.
+
+<br />
+
+### **About Us Page**
+
+- Static Page about us page that starts with a short intro about this project.
+
+- Next, we have a team overview intro about our team.
+
+- Below we have our team profiles that also have the same hover effect as the home page feature product. 
+- In our team profile is a short bio, photo with our GitHut & LinkedIn button.
+
+#### **Page Challenge**
+
+...
 
 <br />
 
