@@ -1,7 +1,7 @@
 const createHTMLList = (index, name, type, description, price, length, width, height,imageURL) =>
 `
 <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
-    <div class="card">
+    <div id="productdisplay" class="card">
         <div class="slide slidetop">
             <div class="content">
                 <img class="card-img-top" src=${imageURL} alt="Product Item">

@@ -5,17 +5,19 @@
     width: 40rem;
     object-fit: cover;
 }
+#topSection {
+    background:url("../img/aboutbg.jpg")35% 0 repeat-y fixed;
+    background-size: cover;
+    position: relative;
+}
 
 @media screen and (max-width: 1400px) {
     #teamImage {
         margin: none;
         padding: none;
-        width: 100%;
-
+        width: 95%;
+        height: 35rem;
         object-fit: cover;
-    }
-    #introText {
-        margin: none;
     }
     .row {
         --bs-gutter-x: 0;
@@ -24,7 +26,7 @@
 }
 @media screen and (max-width: 770px) {
     #introText {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
 @media screen and (max-width: 430px) {
@@ -32,7 +34,9 @@
         height: 25rem;
     }
 }
-
+#introText {
+    padding-top: 0.5rem;
+}
 
 .team{
     margin-bottom: 2rem;
@@ -71,7 +75,7 @@
     text-align: center;
     padding: 20px 15px;
     cursor: pointer;
-    max-width:300px;
+    max-width:350px;
     transition: all 0.3s;
 }
 
@@ -96,10 +100,9 @@
 }
 
 .teamMember p{
-    font-size: 20px;
     line-height: 1.6;
     /*height control*/
-    max-height: 160px;
+    max-height: 200px;
     overflow: hidden;
 }
 
