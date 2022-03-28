@@ -26,4 +26,7 @@
     .pe-5 {
         padding-right: none;
     }
+    p {
+        font-size: 16px;
+    }
 }
