@@ -150,7 +150,7 @@ Home Page
 ![footer.png](readmesrc/footer.png)
 Shop Page
 ![product.png](readmesrc/product.png)
-![productdesc.png](readmesrc/productdesc.png)
+![productDesc.png](readmesrc/productDesc.png)
 Login Page
 ![login.png](readmesrc/login.png)
 Form Page
@@ -160,7 +160,7 @@ About Us Page
 ![aboutUsTop.png](readmesrc/aboutUsTop.png)
 ![aboutUsBottom.png](readmesrc/aboutUsBottom.png)
 Contact Us Page
-![contactus.png](readmesrc/contactus.png)
+![contactUs.png](readmesrc/contactUs.png)
 
 <br />
 
