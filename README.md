@@ -145,21 +145,31 @@ Limitations:
 ## **Screenshot**
 
 Home Page
+
 ![home.png](readmesrc/home.png)
 ![navMobile.png](readmesrc/navMobile.png)
 ![footer.png](readmesrc/footer.png)
+
 Shop Page
+
 ![product.png](readmesrc/product.png)
 ![productDesc.png](readmesrc/productDesc.png)
+
 Login Page
+
 ![login.png](readmesrc/login.png)
+
 Form Page
+
 ![form.png](readmesrc/form.png)
 
 About Us Page
+
 ![aboutUsTop.png](readmesrc/aboutUsTop.png)
 ![aboutUsBottom.png](readmesrc/aboutUsBottom.png)
+
 Contact Us Page
+
 ![contactUs.png](readmesrc/contactUs.png)
 
 <br />
