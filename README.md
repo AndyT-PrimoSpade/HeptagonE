@@ -80,21 +80,6 @@
 
 <br />
 
-### **About Us Page**
-
-- Static Page about us page that starts with a short intro about this project.
-
-- Next, we have a team overview intro about our team.
-
-- Below we have our team profiles that also have the same hover effect as the home page feature product. 
-- In our team profile is a short bio, photo with our GitHut & LinkedIn button.
-
-#### **Page Challenge**
-
-...
-
-<br />
-
 ### **Add Product Form** 
 
 - After admin login, they will be able to add a new product. There is some validation done before the product is added to the backend.
@@ -103,9 +88,55 @@
 
 #### **Page Challenge**
 
-...
+-To link the form with the backend database in order to POST through the API.
 
 <br />
+
+### **Contact Us Page**
+
+- Static Contact Us page with a feedback form for customers to send messages to the company,
+  which does not work yet. The fixed background image makes the page look interesting.
+- Next, the page includes the company's address, operational hours, contact details and
+  clickable links to social media.
+
+#### **Page Challenge**
+
+N/A
+
+<br />
+
+### **About Us Page**
+
+- Static About Us page that starts with a short intro about this project. The client may
+  input their company mission, story and social responsibility statements here.
+
+- Next, we have a team overview intro about our team.
+
+- Below we have our team profiles that also have the same hover effect as the home page feature product.
+- In our team profile is a short bio, photo with our GitHut & LinkedIn button.
+
+#### **Page Challenge**
+
+- Making the text readable with background image
+
+<br />
+
+---
+## **Reflections**
+
+Additional features that can be considered in the future:
+
+- Add to Cart
+- Admin Dashboard
+- Promotion banners
+- Working Contact Us form that POST to database
+
+Limitations:
+- Website is deployed using Heroku server (free version) that deletes posted products after 24 
+  hours. 
+- Collective inexperience of the team means we have yet to be exposed to more frameworks or 
+  programming languages that may make the site more effective.  
+
 
 ---
 
@@ -113,7 +144,23 @@
 
 ## **Screenshot**
 
-To be added.
+Home Page
+![home.png](readmesrc/home.png)
+![navMobile.png](readmesrc/navMobile.png)
+![footer.png](readmesrc/footer.png)
+Shop Page
+![product.png](readmesrc/product.png)
+![productdesc.png](readmesrc/productdesc.png)
+Login Page
+![login.png](readmesrc/login.png)
+Form Page
+![form.png](readmesrc/form.png)
+
+About Us Page
+![aboutUsTop.png](readmesrc/aboutUsTop.png)
+![aboutUsBottom.png](readmesrc/aboutUsBottom.png)
+Contact Us Page
+![contactus.png](readmesrc/contactus.png)
 
 <br />
 
@@ -166,7 +213,7 @@ To be added.
 
 - Jean Looi, our Lecturer during this Bootcamp.
 - Wonderful team from Generation Singapore.
-- Our Mentor 
+- Our Mentors, Netra Prabhu and Kirk Zhang
 
 <br />
 
