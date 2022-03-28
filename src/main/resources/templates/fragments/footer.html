@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Title</title>
 </head>
 
@@ -23,7 +25,7 @@
                     <h6>OUR BRAND</h6>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">About Us</a>
+                            <a th:href="@{aboutus}">About Us</a>
                         </li>
                         <li>
                             <a href="#!">Services</a>
@@ -37,14 +39,14 @@
                             <a href="#!">Help Center</a>
                         </li>
                         <li>
-                            <a href="#!">Contact Us</a>
+                            <a th:href="@{contactUs}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright text-center py-3">© 2022 Copyright:
-            <a href="#"> Heptagon</a>
+            <a th:href="@{index}"> Heptagon</a>
         </div>
     </footer>
 
