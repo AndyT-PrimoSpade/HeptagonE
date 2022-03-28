@@ -103,11 +103,13 @@
     #missings {
         display: none;
     }
-
-}
-@media screen and (max-width: 991px) {
     #productdisplay {
         margin: 2rem;
+    }
+}
+@media screen and (max-width: 765px) {
+    #searchBtn {
+        display: none;
     }
 }
 
