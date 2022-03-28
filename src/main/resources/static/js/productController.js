@@ -10,10 +10,10 @@ const createHTMLList = (index, name, type, description, price, length, width, he
         <div class="slide slidebtm">
             <div class="content">
                 <div id="card-btm" class="card-body row">
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <h4 class="card-title">${name}</h4>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <p id="price" class="mb-2 text-end"><span>$${price}</span></p>
                     </div>
                     <hr>
