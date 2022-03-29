@@ -30,3 +30,13 @@
         font-size: 16px;
     }
 }
+@media screen and (max-width: 380px) {
+    #productDescription {
+        height: 10rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    #productDescription {
+        height: 15rem;
+    }
+}
