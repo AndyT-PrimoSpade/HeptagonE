@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
     <title>Login Page</title>
     <meta name="description" content="Heptagon Online Shop">
@@ -25,10 +25,10 @@
 
 <body>
     <!--start of LOGIN-->
-    <div class="container-fluid vh-100">
-        <div class="" style="margin-top:20px">
+    <section class="loginBg">
+        <div class="container">
             <div class="rounded d-flex justify-content-center">
-                <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+                <div class="loginBox col-lg-4 col-md-6 col-sm-12 shadow-lg p-5 mt-2 mb-2">
                     <div class="text-center">
                         <h3>Sign In</h3>
                     </div>
@@ -40,7 +40,7 @@
                     </div>
 
                     <form th:action="@{/login}" method="post">
-                        <div class="p-4">
+                        <div class="p-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-secondary"><i
                                         class="bi bi-person-plus-fill text-white"></i></span>
@@ -77,7 +77,7 @@
 
             </div>
         </div>
-    </div>
+    </section>
     <!--END of LOGIN-->
     <!-- Footer -->
     <div th:insert="fragments/scrollTop.html :: scrollTop"></div>
