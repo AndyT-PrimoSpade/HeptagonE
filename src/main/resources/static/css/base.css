@@ -166,6 +166,9 @@ footer a:hover {
 .footer-copyright {
     font-size: 0.75rem;
 }
+#logout {
+    cursor: pointer;
+}
 @media screen and (max-width: 991px) {
     #newsLetter {
         margin-bottom: 1rem;
