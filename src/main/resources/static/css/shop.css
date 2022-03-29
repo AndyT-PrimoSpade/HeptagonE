@@ -103,9 +103,6 @@
     #missings {
         display: none;
     }
-    #productdisplay {
-        margin: 2rem;
-    }
 }
 @media screen and (max-width: 765px) {
     #searchBtn {
