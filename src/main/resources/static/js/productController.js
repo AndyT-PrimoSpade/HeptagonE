@@ -32,7 +32,7 @@ function displayProductDetails(item)
     let myStorage = window.localStorage;
     myStorage.clear();
     myStorage.setItem(item.id, JSON.stringify(item));
-    location.href="productdescription?id=" + item.id;
+    window.open("productdescription?id=" + item.id)
 }
 
 
