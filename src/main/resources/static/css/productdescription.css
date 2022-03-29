@@ -30,7 +30,7 @@
         font-size: 16px;
     }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
     #productDescription {
         height: 10rem;
     }
